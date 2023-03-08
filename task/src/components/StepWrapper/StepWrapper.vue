@@ -27,24 +27,15 @@
 
         <v-stepper-items>
             <v-stepper-content step="1">
-                <!--                <v-card-->
-                <!--                        class="mb-12"-->
-                <!--                        color="grey lighten-1"-->
-                <!--                        height="200px"-->
-                <!--                ></v-card>-->
                 <shop-step :items="finalData" shopStep="true"></shop-step>
-
             </v-stepper-content>
 
             <v-stepper-content step="2">
                 <shop-step :items="finalData"></shop-step>
-
-
             </v-stepper-content>
 
             <v-stepper-content step="3">
-               <payment-step></payment-step>
-
+                <payment-step></payment-step>
             </v-stepper-content>
         </v-stepper-items>
         <v-sheet class="d-flex justify-center mb-3">

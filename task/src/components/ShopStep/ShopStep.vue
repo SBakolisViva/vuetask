@@ -31,7 +31,6 @@
         </div>    
         <v-list>
             <v-list-item
-
                     v-for="item in items"
                     :key="item.id"
             >

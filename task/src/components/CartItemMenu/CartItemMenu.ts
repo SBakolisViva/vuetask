@@ -3,7 +3,6 @@ import { Component, Prop } from 'vue-property-decorator';
 import { CartItem } from '@/types';
 import { formatPrice } from '@/helpers/utils';
 
-
 @Component({
     data() {
         return {
@@ -20,7 +19,6 @@ export default class ShopStep extends Vue {
     
     amount: number
     
-    
     get totalAmount():number{
       return this.$store.getters.getItem(this.item.id) ? this.$store.getters.getItem(this.item.id).quantity : 0;
     }
@@ -30,10 +28,7 @@ export default class ShopStep extends Vue {
     }
     addToCart(item: CartItem) {
         this.$store.commit('cartAddition', {
-            id: this.item.id,
-            name: this.item.name,
-            quantity: this.amount,
-            price: this.item.price
+            ...this.item, quantity: this.amount
         } as CartItem)
         console.log(this.$store.state.cart);
     }
@@ -45,7 +40,6 @@ export default class ShopStep extends Vue {
     subQuantity() {
         this.amount > 0 ? this.amount-- : this.amount;
     }
-
 }
 
 

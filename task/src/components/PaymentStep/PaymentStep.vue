@@ -1,4 +1,4 @@
-﻿<style src="./PaymentStep.scss" lang="scss"/>
+﻿
 <template>
     <validation-observer ref="observer" v-slot="{invalid}">
         <v-form @submit.prevent="submitForm">

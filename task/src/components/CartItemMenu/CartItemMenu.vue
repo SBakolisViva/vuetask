@@ -1,11 +1,9 @@
 ﻿<style src="./CartItemMenu.scss" lang="scss"/>
 <template>
-    
         <v-container class="d-flex flex-row justify-space-around align-center ma-1 pa-3" width="100%">
             <v-sheet class="d-flex flex-row name-group min-w-300px">
                 <p class="mb-0 min-w-200px">{{ item.name }}</p>
                 <p class="mb-0">{{ formatedPrice }}</p>
-                
             </v-sheet>
             <v-sheet class="d-flex flex-row max-w-50">
                 <v-btn
@@ -48,7 +46,5 @@
                 </v-btn>
             </v-sheet>
         </v-container>
-         
-    
 </template>
 <script src="./CartItemMenu.ts"/>

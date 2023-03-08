@@ -17,7 +17,6 @@ export default class PriceDisplay extends Vue {
     @Prop()
     activeCoupon: string;
 
-
     cartDiscountTotal: number;
 
     get cartTotal(): string {
@@ -40,8 +39,6 @@ export default class PriceDisplay extends Vue {
     get hasDiscount(): boolean {
         return (this.cartTotal !== this.discountedPrice) && Number(this.cartTotal) !== 0;
     }
-
-
 }
 
 

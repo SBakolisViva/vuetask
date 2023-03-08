@@ -43,12 +43,10 @@ export default class StepWrapper extends Vue {
     }
 
     nextStep(): number | null {
-        console.log(this.step);
         return this.step < 3 ? this.step++ : null;
     }
 
     prevStep(): number | null {
-        console.log(this.step);
         return this.step > 1 ? this.step-- : null;
     }
     
