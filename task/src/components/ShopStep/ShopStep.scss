@@ -1,0 +1,22 @@
+﻿.max-w{
+    &-50 {
+        max-width: 30% !important;
+    }
+}
+
+.name-group{
+    p{
+        padding-left: 2rem;
+    }
+}
+
+.min-w{
+    &-300px{
+        min-width: 300px;
+    }
+    &-200px{
+        min-width: 200px;
+    }
+}
+
+
