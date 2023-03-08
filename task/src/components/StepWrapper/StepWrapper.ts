@@ -24,13 +24,11 @@ export default class StepWrapper extends Vue {
     @Watch('rawData')
     onDataChanged(data:string|null, oldData:string){
         this.rawData !== null ? this.finalData = this.mapDataToCartItem(this.rawData):"";
-        //console.log(this.finalData[0]);
     }
     
     beforeMount() {
         axios.get(`${mockable}products`)
             .then(response => {
-                console.log(response.data);
                 this.rawData = response.data;
             }, error => {
                 console.log("Failed to fetch data.");

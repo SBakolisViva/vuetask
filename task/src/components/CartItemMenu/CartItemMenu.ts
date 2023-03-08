@@ -30,7 +30,6 @@ export default class ShopStep extends Vue {
         this.$store.commit('cartAddition', {
             ...this.item, quantity: this.amount
         } as CartItem)
-        console.log(this.$store.state.cart);
     }
 
     addQuantity() {
